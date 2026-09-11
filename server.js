@@ -6,6 +6,12 @@ const mongoose = require("mongoose")
 const morgan = require("morgan")
 const methodOverride = require("method-override")
 
+// importing the mongoose models
+const User = require('./models/User')
+const Listing = require('./models/Listing')
+const Review = require('./models/Review')
+const Category = require('./models/Category')
+
 
 
 // Middleware
@@ -30,6 +36,11 @@ async function conntectToDB(){ //connection to the database
 conntectToDB()
 
 
+async function testRelationships() {
+    const newUser = await User.create({
+        
+    })
+}
 
 
 
