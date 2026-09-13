@@ -1,0 +1,77 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: aqua;
+}
+
+.listings-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: aquamarine; */
+    padding: 10px;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.listings-container div {
+    background-color: navy;
+    border: solid;
+    border-color: cyan;
+    text-align: center;
+    border-radius: 20px;
+    color: antiquewhite;
+    padding: 1%;
+}
+
+.details-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.car-details{
+    width: 40%;
+    padding-left: 2% ;
+    /* text-align: center; */
+}
+
+.car-img-div{
+    width: auto;
+}
+
+.car-img-div img{
+    width: 32rem;
+    height: auto;
+}
+
+.form-buttons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 12px;
+
+}
+
+.form-input-section{
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    padding-left: 1%;
+}
+
+.form-input-section button{
+    width: 8rem;
+    margin-top: 4%;
+    align-self: center;
+}
+
+.form-input-section label{
+    margin-top: 2%;
+}
+
+
+.reg-input{
+    display: inline;
+    margin-top: 2%;
+}

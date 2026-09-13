@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Listings</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <%- include('../partials/navbar.ejs') %>
+
+    <h1>All Listings</h1>
+
+    <div class="listings-container">
+    <% for( oneListing of listings) { %>
+        <div class="listing-box">
+            <p><b>Street Address:</b> <%= oneListing.streetAddress %></p>
+            <p><b>City:</b> <%= oneListing.city %></p>
+            <p><b>Price:</b> <%= oneListing.price %></p>
+            <p><b>Size:</b> <%= oneListing.size %></p>
+            <p><b>Owner:</b> <%= oneListing.owner.userName %></p>
+            <p><b>Category:</b> <%= oneListing.category.categoryName %></p>
+            
+            <a href="/listings/<%= oneListing._id %>/edit">
+            <button>
+                Edit Listing Details
+            </button>
+            </a>
+
+            <form action="/listings/<%= oneListing._id %>?_method=DELETE" method="post" onsubmit="return confirm('Are you sure you want to delete this Listing?')">
+                <button>
+                    Delete Listing
+                </button>
+            </form>
+        </div>
+    <% } %>
+    </div>
+</body>
+</html>
